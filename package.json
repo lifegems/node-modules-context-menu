@@ -1,0 +1,59 @@
+{
+    "name": "node-modules-manager",
+    "displayName": "vsc-plugin-nmm",
+    "description": "Context menu for node_modules directory.",
+    "version": "0.0.1",
+    "publisher": "darthyody",
+    "engines": {
+        "vscode": "^1.16.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.hideItem",
+        "onCommand:extension.nodeModulesConfig"
+    ],
+    "main": "./out/src/extension",
+    "contributes": {
+        "menus": {
+            "explorer/context": [
+                {
+                    "command": "extension.hideItem",
+                    "when": "resourceFilename == 'node_modules'"
+                },
+                {
+                    "command": "extension.nodeModulesConfig",
+                    "when": "resourceFilename == 'node_modules'"
+                }
+            ]
+        },
+        "commands": [
+            {
+                "command": "extension.hideItem",
+                "title": "Hide Folder"
+            },
+            {
+                "command": "extension.nodeModulesConfig",
+                "title": "Hide non-named dependencies"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "npm run compile && node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.5.2",
+        "vscode": "^1.1.5",
+        "mocha": "^3.5.0",
+        "@types/node": "^7.0.43",
+        "@types/mocha": "^2.2.42"
+    },
+    "dependencies": {
+        "vsce": "^1.30.0"
+    }
+}
