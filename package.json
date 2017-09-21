@@ -1,6 +1,6 @@
 {
-    "name": "node-modules-manager",
-    "displayName": "vsc-plugin-nmm",
+    "name": "node-modules-context-menu",
+    "displayName": "Node Modules Context Menu",
     "description": "Context menu for node_modules directory.",
     "version": "0.0.1",
     "publisher": "darthyody",
