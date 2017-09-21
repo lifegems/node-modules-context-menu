@@ -2,7 +2,7 @@
     "name": "node-modules-context-menu",
     "displayName": "Node Modules Context Menu",
     "description": "Context menu for node_modules directory.",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "publisher": "darthyody",
     "engines": {
         "vscode": "^1.16.0"
