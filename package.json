@@ -55,5 +55,10 @@
     },
     "dependencies": {
         "vsce": "^1.30.0"
-    }
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/lifegems/node-modules-context-menu.git"
+    },
+    "homepage": "https://marketplace.visualstudio.com/items?itemName=darthyody.node-modules-context-menu"
 }
